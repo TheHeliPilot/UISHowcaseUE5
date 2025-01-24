@@ -16,5 +16,5 @@ UInventoryItem::~UInventoryItem()
 
 void UInventoryItem::UseItem() const
 {
-	UE_LOG(LogTemp, Display, TEXT("Used %s"), *ItemName);
+	GEngine->AddOnScreenDebugMessage(-1, 5, FColor::Purple, FString::Printf(TEXT("Item used: %s"), *ItemName));
 }
